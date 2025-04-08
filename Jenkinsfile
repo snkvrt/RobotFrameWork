@@ -50,8 +50,8 @@ pipeline {
                 script {
                     bat """
                         curl -X POST https://discordapp.com/api/webhooks/1359154405147934992/2RwoZD57gNSStkB8yxAUT4O7jAe7OOAECZTCuMj9tDW6RBHYUaCjgon1E05MoTjsaQlg ^
-                        -H "Content-Type: application/json" ^
-                        -d "{\\"username\\": \\"Jerôme\\", \\"content\\": \\"Bon qui vient au BK ? J'espère que t'es chaud chaud mon Yoyo ! Arhhh ça va pas tomber au test de toute façon ! \\"}" ^ 
+                        -H "Content-Type: application/xml" ^
+                        --data @"outputs/output.xml" ^ 
                     """
                 }
             }
