@@ -32,7 +32,7 @@ pipeline {
             }
         
         }
-         stage('Send Results to Xray') {
+        stage('Send Results to Xray') {
             steps {
                 script {
                     bat """
@@ -40,6 +40,18 @@ pipeline {
                         -H "Content-Type: application/xml" ^
                         -H "Authorization: Bearer ${XRAY_TOKEN}" ^
                         --data @"outputs/output.xml"
+                    """
+                }
+            }
+        }
+        stage('Discord message') {
+            steps {
+                script {
+                    bat """
+                        curl ^
+                        -H "Content-Type: application/json" ^
+                        -d "{"username": "Julien", "content": "Hamidou j'aurais ta peau !"}" ^
+                        https://discordapp.com/api/webhooks/1359154405147934992/2RwoZD57gNSStkB8yxAUT4O7jAe7OOAECZTCuMj9tDW6RBHYUaCjgon1E05MoTjsaQlg 
                     """
                 }
             }
