@@ -36,10 +36,10 @@ pipeline {
             steps {
                 script {
                     bat """
-                        curl -X POST https://xray.cloud.getxray.app/api/v2/import/execution/robot ^
-                        -H "Content-Type: application/json" ^
+                        curl -X POST https://xray.cloud.getxray.app/api/v2/import/execution/robot?projectKey=POEI20252 ^
+                        -H "Content-Type: application/xml" ^
                         -H "Authorization: Bearer ${XRAY_TOKEN}" ^
-                        --data @"outputs/output.json"
+                        --data @"outputs/output.xml"
                     """
                 }
             }
