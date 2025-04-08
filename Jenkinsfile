@@ -51,7 +51,7 @@ pipeline {
                     bat """
                         curl -X POST https://discordapp.com/api/webhooks/1359154405147934992/2RwoZD57gNSStkB8yxAUT4O7jAe7OOAECZTCuMj9tDW6RBHYUaCjgon1E05MoTjsaQlg ^
                         -H "Content-Type: application/json" ^
-                        -d "{\\"username\\": \\"William\\", \\"content\\": \\"Salut ! Je souhaite devenir le meilleur dresseur avec ma pokéball à 18 balles ! Attraper les tous ! \\"}" ^ 
+                        -d "{\\"username\\": \\"Jerôme\\", \\"content\\": \\"Bon qui vient au BK ? J'espère que t'es chaud chaud mon Yoyo ! Arhhh ça va pas tomber au test de toute façon ! \\"}" ^ 
                     """
                 }
             }
